@@ -21,6 +21,11 @@ app.post('/save', (req, res) => {
   });
 });
 
+// Handle CORS preflight requests
+app.options('/save', (req, res) => {
+  res.sendStatus(200);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
