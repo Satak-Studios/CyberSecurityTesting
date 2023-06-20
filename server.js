@@ -12,10 +12,10 @@ app.post('/save', (req, res) => {
 
   fs.appendFile('1.txt', data + '\n', (err) => {
     if (err) {
-      console.log('Error saving user information:', err);
+      //console.log('Error saving user information:', err);
       res.sendStatus(500);
     } else {
-      console.log('User information saved successfully.');
+      c//onsole.log('User information saved successfully.');
       res.sendStatus(200);
     }
   });
